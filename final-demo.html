@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 
 
-<title>demo</title>
+<title>final-demo</title>
 
 <style type="text/css">
     /*!
@@ -13121,11 +13121,12 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip3 install scipy
+<span class="o">!</span>pip3 install sklearn
+<span class="o">!</span>pip3 install nbinteract
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="k">import</span> <span class="n">interact</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">hashlib</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 <span class="kn">import</span> <span class="nn">json</span> 
@@ -13136,6 +13137,85 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: scipy in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (1.3.0)
+Requirement already satisfied: numpy&gt;=1.13.3 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from scipy) (1.15.4)
+<span class="ansi-yellow-fg">WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+Requirement already satisfied: sklearn in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (0.0)
+Requirement already satisfied: scikit-learn in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from sklearn) (0.21.2)
+Requirement already satisfied: joblib&gt;=0.11 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (0.13.2)
+Requirement already satisfied: scipy&gt;=0.17.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.3.0)
+Requirement already satisfied: numpy&gt;=1.11.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from scikit-learn-&gt;sklearn) (1.15.4)
+<span class="ansi-yellow-fg">WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+Requirement already satisfied: nbinteract in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (0.2.5)
+Requirement already satisfied: nbconvert&lt;6,&gt;=5.3 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (5.6.0)
+Requirement already satisfied: nbformat&lt;5,&gt;=4.4.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (4.4.0)
+Requirement already satisfied: docopt&lt;1,&gt;=0.6.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (0.6.2)
+Requirement already satisfied: IPython&lt;8,&gt;=6 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (7.5.0)
+Requirement already satisfied: numpy&lt;2,&gt;=1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (1.15.4)
+Requirement already satisfied: bqplot==0.11.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (0.11.0)
+Requirement already satisfied: Jinja2&lt;3,&gt;=2.10 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (2.11.1)
+Requirement already satisfied: traitlets&lt;5,&gt;=4.3 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (4.3.2)
+Requirement already satisfied: ipywidgets&lt;8,&gt;=7.5.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (7.5.1)
+Requirement already satisfied: toolz&lt;1,&gt;=0.8 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbinteract) (0.10.0)
+Requirement already satisfied: pygments in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (2.4.2)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (0.3)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (1.4.2)
+Requirement already satisfied: testpath in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (0.4.2)
+Requirement already satisfied: defusedxml in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (0.6.0)
+Requirement already satisfied: jupyter-core in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (4.6.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (0.8.4)
+Requirement already satisfied: bleach in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (3.1.0)
+Requirement already satisfied: ipython-genutils in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (0.2.0)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (3.0.2)
+Requirement already satisfied: appnope; sys_platform == &#34;darwin&#34; in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.1.0)
+Requirement already satisfied: pickleshare in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.7.5)
+Requirement already satisfied: pexpect; sys_platform != &#34;win32&#34; in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (4.7.0)
+Requirement already satisfied: setuptools&gt;=18.5 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (40.6.2)
+Requirement already satisfied: decorator in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (4.4.0)
+Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (2.0.9)
+Requirement already satisfied: backcall in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.1.0)
+Requirement already satisfied: jedi&gt;=0.10 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from IPython&lt;8,&gt;=6-&gt;nbinteract) (0.13.3)
+Requirement already satisfied: pandas in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from bqplot==0.11.0-&gt;nbinteract) (0.24.2)
+Requirement already satisfied: traittypes&gt;=0.0.6 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from bqplot==0.11.0-&gt;nbinteract) (0.2.1)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from Jinja2&lt;3,&gt;=2.10-&gt;nbinteract) (1.1.0)
+Requirement already satisfied: six in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from traitlets&lt;5,&gt;=4.3-&gt;nbinteract) (1.15.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (5.1.4)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (3.5.1)
+Requirement already satisfied: webencodings in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from bleach-&gt;nbconvert&lt;6,&gt;=5.3-&gt;nbinteract) (0.5.1)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (0.15.4)
+Requirement already satisfied: attrs&gt;=17.4.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&lt;5,&gt;=4.4.0-&gt;nbinteract) (19.2.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from pexpect; sys_platform != &#34;win32&#34;-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.6.0)
+Requirement already satisfied: wcwidth in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.1.7)
+Requirement already satisfied: parso&gt;=0.3.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jedi&gt;=0.10-&gt;IPython&lt;8,&gt;=6-&gt;nbinteract) (0.4.0)
+Requirement already satisfied: pytz&gt;=2011k in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from pandas-&gt;bqplot==0.11.0-&gt;nbinteract) (2019.1)
+Requirement already satisfied: python-dateutil&gt;=2.5.0 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from pandas-&gt;bqplot==0.11.0-&gt;nbinteract) (2.8.0)
+Requirement already satisfied: tornado&gt;=4.2 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (5.1.1)
+Requirement already satisfied: jupyter-client in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (5.3.4)
+Requirement already satisfied: notebook&gt;=4.4.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (6.0.1)
+Requirement already satisfied: pyzmq&gt;=13 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (18.0.1)
+Requirement already satisfied: terminado&gt;=0.8.1 in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (0.8.2)
+Requirement already satisfied: prometheus-client in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (0.7.1)
+Requirement already satisfied: Send2Trash in /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.5.0-&gt;ipywidgets&lt;8,&gt;=7.5.0-&gt;nbinteract) (1.5.0)
+<span class="ansi-yellow-fg">WARNING: You are using pip version 19.2.3, however version 20.1.1 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.</span>
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13342,6 +13422,29 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Proportion of Errors Exceeding Threshold: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="n">err</span>
+
+<span class="k">def</span> <span class="nf">generate_hist_sample</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">distribution</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">lambda_</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">6.5</span><span class="p">):</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">distribution</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;uniform&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">uniform</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;zipf&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zipf</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;exp&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">planck</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">lambda_</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;lognorm&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">lognorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;geometric&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span>  <span class="n">stats</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;normal&#39;</span><span class="p">:</span>
+        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>    
 </pre></div>
 
     </div>
@@ -13414,29 +13517,7 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_hist_sample</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">distribution</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">lambda_</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">6.5</span><span class="p">):</span>
-    <span class="n">dist</span> <span class="o">=</span> <span class="n">distribution</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;uniform&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">uniform</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;zipf&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zipf</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;exp&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">planck</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">lambda_</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;lognorm&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">lognorm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;geometric&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span>  <span class="n">stats</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">elif</span> <span class="n">dist</span> <span class="o">==</span> <span class="s1">&#39;normal&#39;</span><span class="p">:</span>
-        <span class="n">float_sample</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">float_sample</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>    
-<span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s2">&quot;Distribution of Data&quot;</span><span class="p">,</span>
     <span class="s1">&#39;ylabel&#39;</span><span class="p">:</span> <span class="s2">&quot;Count&quot;</span><span class="p">,</span>
     <span class="s1">&#39;xlabel&#39;</span><span class="p">:</span> <span class="s2">&quot;Data Point&quot;</span><span class="p">,}</span>
@@ -13594,6 +13675,37 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vary the standard distribution to see how the errors change!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
 </div>
 </div>
 
@@ -13756,10 +13868,6 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># VISUALIZE ML LEARNED COUNT MIN SKETCH</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">hashlib</span>
 <span class="kn">import</span> <span class="nn">json</span> 
 
@@ -13839,8 +13947,6 @@ div#notebook {
   <span class="k">else</span><span class="p">:</span>
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
-<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">uniform_sample</span><span class="p">:</span>
-  <span class="n">cms</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">compute_error_prob</span><span class="p">(</span><span class="n">cms</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
   <span class="n">err</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13963,7 +14069,7 @@ div#notebook {
     <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.05</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
     <span class="n">threshold</span> <span class="o">=</span> <span class="n">eps</span> <span class="o">*</span> <span class="n">n</span>
-
+    <span class="n">mean</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mf">0.2</span>
     <span class="n">sample</span> <span class="o">=</span> <span class="n">generate_sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sd</span><span class="p">)</span>
     <span class="n">X_tr</span><span class="p">,</span> <span class="n">Y_tr</span><span class="p">,</span> <span class="n">hh</span> <span class="o">=</span> <span class="n">label_sample</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
@@ -13979,7 +14085,8 @@ div#notebook {
     <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.05</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
     <span class="n">threshold</span> <span class="o">=</span> <span class="n">eps</span> <span class="o">*</span> <span class="n">n</span>
-
+    <span class="n">mean</span> <span class="o">=</span> <span class="mi">0</span>
+    
     <span class="n">p</span> <span class="o">=</span> <span class="mf">0.2</span>
     <span class="n">sample</span> <span class="o">=</span> <span class="n">generate_sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sd</span><span class="p">)</span>
     <span class="n">X_tr</span><span class="p">,</span> <span class="n">Y_tr</span><span class="p">,</span> <span class="n">hh</span> <span class="o">=</span> <span class="n">label_sample</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
@@ -14026,16 +14133,17 @@ div#notebook {
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">perfect</span><span class="p">:</span>
             <span class="n">size</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">perfect</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">size</span>
-
+    
 <span class="k">def</span> <span class="nf">opt_2</span><span class="p">(</span><span class="n">sd</span><span class="p">):</span>
     <span class="n">eps</span> <span class="o">=</span> <span class="mf">0.01</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.05</span>
     <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
     <span class="n">threshold</span> <span class="o">=</span> <span class="n">eps</span> <span class="o">*</span> <span class="n">n</span>
-
+    <span class="n">mean</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mf">0.2</span>
     <span class="n">sample</span> <span class="o">=</span> <span class="n">generate_sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">dist</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sd</span><span class="p">)</span>
     <span class="n">X_tr</span><span class="p">,</span> <span class="n">Y_tr</span><span class="p">,</span> <span class="n">hh</span> <span class="o">=</span> <span class="n">label_sample</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+
     <span class="n">rcms</span> <span class="o">=</span> <span class="n">RuleCountMinSketch</span><span class="p">(</span><span class="n">eps</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">hh</span><span class="p">)</span>
 
     <span class="n">load_data</span><span class="p">(</span><span class="n">rcms</span><span class="p">,</span> <span class="n">sample</span><span class="p">)</span>
@@ -14250,80 +14358,10 @@ div#notebook {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nbi</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s1">&#39;markiewagner/cs166-proj-final/master&#39;</span><span class="p">,</span> <span class="s1">&#39;demo.ipynb&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    
-
-
-
-
-<div id="8b69b5a4-c752-4b87-b6c2-a11879782a5e"></div>
-<div class="output_subarea output_javascript ">
-<script type="text/javascript">
-var element = $('#8b69b5a4-c752-4b87-b6c2-a11879782a5e');
-IPython.notebook.save_checkpoint();
-</script>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    
-
-
-
-
-<div id="af1cf311-9374-4772-9670-dc6448fd0479"></div>
-<div class="output_subarea output_javascript ">
-<script type="text/javascript">
-var element = $('#af1cf311-9374-4772-9670-dc6448fd0479');
-IPython.notebook.save_notebook();
-</script>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Saving notebook... Saved &#39;demo.ipynb&#39;.
-Converting notebook...
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<p>Successfully converted!</p>
-<p><a href="demo.html" target="_blank" download>Click to download your webpage.</a></p>
-<p>To host your webpage, see the documentation:
-<a href="https://www.nbinteract.com/tutorial/tutorial_publishing.html"
-        target="_blank">
-    https://www.nbinteract.com/tutorial/tutorial_publishing.html
-</a></p>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14359,7 +14397,7 @@ Converting notebook...
     }
 
     var interact = new window.NbInteract({
-      spec: 'markiewagner/cs166-proj-final/master',
+      spec: 'markiewagner/cs166-final/master',
       baseUrl: 'https://mybinder.org',
       provider: 'gh',
     })
