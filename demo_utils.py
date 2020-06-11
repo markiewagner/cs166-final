@@ -15,7 +15,7 @@ opts1 = {
     'xlabel': "Data Point",
     'ylim': (0, 500)}
 
-def importall():
+def import_all():
     from ipywidgets import interact
     import numpy as np
     import math
@@ -193,7 +193,6 @@ def get_data_for_hist_errors(n, eps, delta, distribution):
     return err
 
 def generate_hist_sample(n, distribution, loc=0, scale=10000, lambda_=5, s=1, a=6.5):
-    
     import scipy.stats as stats
     dist = distribution
     if dist == 'uniform':
