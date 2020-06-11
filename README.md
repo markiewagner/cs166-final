@@ -1,3 +1,3 @@
-# cs166-final-proj
-# cs166-final
-# cs166-final
+# cs166-final-project
+
+learned index structure demo lives in this repo
