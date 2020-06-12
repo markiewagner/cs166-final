@@ -192,7 +192,7 @@ def get_data_for_hist_errors(n, eps, delta, distribution):
 
     return err
 
-def generate_hist_sample(n, distribution, loc=0, scale=10000, lambda_=5, s=1, a=6.5):
+def generate_hist_sample(n, distribution, loc=0, scale=100, lambda_=5, s=1, a=6.5):
     import scipy.stats as stats
     dist = distribution
     if dist == 'uniform':
@@ -550,6 +550,10 @@ def opt_1_normal(sd):
 
     load_data(cms, sample)
     p, avg_err, max_err, err = compute_error_prob(cms, sample, n)
+    print("Average Error: " + str(avg_err))
+    print("Maximum Error: " + str(max_err))
+    print("Acceptable Threshold: " + str(threshold))
+    print("Proportion of Errors Exceeding Threshold: " + str(p))
     return err
 
 def opt_1_learned(sd):
@@ -567,6 +571,10 @@ def opt_1_learned(sd):
 
     load_data(lcms, sample)
     p, avg_err, max_err, err = compute_error_prob(lcms, sample, n)
+    print("Average Error: " + str(avg_err))
+    print("Maximum Error: " + str(max_err))
+    print("Acceptable Threshold: " + str(threshold))
+    print("Proportion of Errors Exceeding Threshold: " + str(p))
     return err
 
 class RuleCountMinSketch:
@@ -620,4 +628,8 @@ def opt_2(sd):
 
     load_data(rcms, sample)
     p, avg_err, max_err, err = compute_error_prob(rcms, sample, n)
+    print("Average Error: " + str(avg_err))
+    print("Maximum Error: " + str(max_err))
+    print("Acceptable Threshold: " + str(threshold))
+    print("Proportion of Errors Exceeding Threshold: " + str(p))
     return err
